@@ -11,6 +11,16 @@ TaskSync é uma aplicação de gerenciamento de tarefas com funcionalidades de C
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![XAMPP](https://img.shields.io/badge/XAMPP-F37623?style=for-the-badge&logo=xampp&logoColor=white)
 
+
+
+## Funcionalidades do Sistema
+· **Cadastro de Usuários:** Adição de novos colaboradores informando nome e e-mail corporativo. <br>
+· **Cadastro de Tarefas:** Registro de novas atividades vinculadas a um usuário responsável, definindo setor e nível de prioridade (Baixa, Média, Alta).<br>
+· **Quadro Kanban Dinâmico:** Visualização das tarefas organizadas automaticamente em três colunas de status: *A Fazer*, *Fazendo* e *Concluído*.<br>
+· **Atualização de Status:** Movimentação das tarefas entre as colunas do quadro com apenas um clique.<br>
+· **Edição:** Possibilidade de alterar a descrição, o responsável, o setor ou a prioridade de uma tarefa existente.<br>
+· **Exclusão Segura:** Remoção de tarefas do sistema, protegida por um alerta de confirmação (SweetAlert2) para evitar exclusões acidentais.<br>
+
 ## Como rodar o projeto localmente
 1. Clone este repositório ou cole a pasta `TaskSync` dentro do diretório `htdocs` do seu XAMPP.
 2. Inicie os módulos **Apache** e **MySQL** no Painel de Controle do XAMPP.
