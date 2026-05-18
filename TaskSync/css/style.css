@@ -1,0 +1,249 @@
+/* Importando a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: rgb(198, 198, 255);
+    --text-color: #333333;
+    --primary-color: #6a1b9a;
+    --primary-hover: #4a148c;
+    --accent-color: #00bfa5;
+    --card-bg: #ffffff;
+    --col-bg: #e6e1f0;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.conteudo {
+    padding: 20px 40px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: var(--card-bg);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.3);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+form + br + a, body > a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+form + br + a:hover, body > a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.menu button {
+    width: auto;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.coluna {
+    flex: 1;
+    background-color: var(--col-bg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    min-height: 500px;
+}
+
+.coluna h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-hover);
+    text-align: center;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 5px solid #ccc; 
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(106, 27, 154, 0.15);
+}
+
+.card p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.prioridade-alta { border-left-color: #e53935; }
+.prioridade-média { border-left-color: #ffb300; }
+.prioridade-baixa { border-left-color: var(--accent-color); }
+
+.acoes {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+}
+
+.acoes a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: #f3f0f8;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.acoes a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.topo-site {
+    background-color: #0d1236;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.topo-site img {
+    max-width: 180px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.topo-site img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        padding: 15px; 
+    }
+
+    .kanban-board {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .coluna {
+        width: 100%;
+        min-height: auto;
+        box-sizing: border-box;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu a {
+        width: 100%;
+    }
+
+    .menu button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .topo-site img {
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kanban-board {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .coluna {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
